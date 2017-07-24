@@ -8,7 +8,7 @@
 %%% ==================================================================== [ EOH ]
 -module(elli_json).
 
-%% Elli Middelware.
+%% Elli Middleware.
 -export([postprocess/3]).
 
 
