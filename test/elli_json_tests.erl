@@ -1,29 +1,49 @@
+%%% ==================================================== [ elli_json_tests.erl ]
+%%% @doc elli_json tests.
+%%% @end
+%%% ==================================================================== [ EOH ]
 -module(elli_json_tests).
 
 -include_lib("eunit/include/eunit.hrl").
 
+
+%%% ============================================================= [ Unit Tests ]
+
 postprocess_test() ->
     %% Empty headers
-    ?assertEqual({200, body()},
-                 elli_json:postprocess(elli_req_record, {200, body()}, [])),
+    check({200, body()}, {200, body()}),
 
-    %% Already compressed
-    ?assertEqual({200, headers(), json_body()},
-                 elli_json:postprocess(elli_req_record, {200, headers(), json_body()}, [])),
+    %% Already encoded
+    check({200, headers(), json_body()},
+          {200, headers(), json_body()}),
 
-    %% Compress body
-    ?assertEqual({200, headers(), json_body()},
-                 elli_json:postprocess(elli_req_record, {200, headers(), body()}, [])).
+    %% Encode body
+    check({200, headers(), json_body()},
+          {200, headers(), body()}).
 
-%% Helpers
+
+%%% ================================================================ [ Helpers ]
+
+check(Expected, Res) ->
+    ?assertEqual(Expected, elli_json:postprocess(req(), Res, [])).
+
 
 body() ->
     {[{foo,[<<"bing">>,2.3,true]}]}.
 
+
 json_body() ->
     <<"{\"foo\":[\"bing\",2.3,true]}">>.
+
 
 headers() ->
     [{<<"Content-Type">>, <<"application/json">>}].
 
 
+req() ->
+    elli_http:mk_req('GET', {abs_path, <<"/">>},
+                     [{<<"Accept">>, <<"application/json">>}],
+                     <<>>, {1, 1}, undefined, {elli_json, []}).
+
+
+%%% ==================================================================== [ EOF ]

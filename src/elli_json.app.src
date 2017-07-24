@@ -1,11 +1,21 @@
 {application, elli_json,
  [
-  {description, "Encodes elli body into JSON"},
-  {vsn, "1"},
+  {description, "Encode elli response bodies as JSON"},
+  {vsn, "1.0.1"},
+  {modules, [
+             elli_json
+            ]},
   {registered, []},
   {applications, [
                   kernel,
                   stdlib
                  ]},
-  {env, []}
+  {env, []},
+
+  {maintainers, ["Eric Bailey"]},
+  {licenses, ["MIT"]},
+  {links,
+   [
+    {"GitHub", "https://github.com/elli-lib/elli_json"}
+   ]}
  ]}.
