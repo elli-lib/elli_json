@@ -1,6 +1,6 @@
 {"1.1.0",
-[{<<"jiffy">>,{pkg,<<"jiffy">>,<<"0.14.11">>},0}]}.
+[{<<"jiffy">>,{pkg,<<"jiffy">>,<<"0.15.0">>},0}]}.
 [
 {pkg_hash,[
- {<<"jiffy">>, <<"919A87D491C5A6B5E3BBC27FAFEDC3A0761CA0B4C405394F121F582FD4E3F0E5">>}]}
+ {<<"jiffy">>, <<"C44B61EA7B5D81B5BBD95EA5922D7C5F915D5BF15500FD1372C1AA10404673A9">>}]}
 ].
