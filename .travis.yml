@@ -5,7 +5,6 @@ before_script:
 - wget https://s3.amazonaws.com/rebar3/rebar3
 - chmod +x rebar3
 env: PATH=$PATH:.
-script: rebar3 as test do eunit, coveralls send
 cache:
   directories:
   - $HOME/.cache/rebar3/
@@ -14,6 +13,6 @@ otp_release:
 - 19.0
 - 18.3
 - 18.0
-# - 17.5
-# - R16B03-1
-# - R15B03-1
+script:
+- rebar3 as test do xref, dialyzer, eunit
+- rebar3 as test coveralls send
