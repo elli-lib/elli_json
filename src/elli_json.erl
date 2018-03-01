@@ -3,7 +3,7 @@
 %%% Encode the response body as JSON.
 %%%
 %%% @author Sukumar Yethadka
-%%% @copyright 2016, Sukumar Yethadka; 2017, elli-lib team.
+%%% @copyright 2016, Sukumar Yethadka; 2017-2018, elli-lib team.
 %%% @end
 %%% ==================================================================== [ EOH ]
 -module(elli_json).

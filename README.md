@@ -2,7 +2,7 @@
 
 # elli_json #
 
-Copyright (c) 2016 Sukumar Yethadka, 2017 elli-lib team.
+Copyright (c) 2016 Sukumar Yethadka, 2017-2018 elli-lib team.
 
 __Version:__ 1.0.1
 
@@ -35,4 +35,3 @@ Encode an elli request body as JSON when the content type is `application/json`.
 
 <table width="100%" border="0" summary="list of modules">
 <tr><td><a href="https://github.com/elli-lib/elli_json/blob/develop/doc/elli_json.md" class="module">elli_json</a></td></tr></table>
-
