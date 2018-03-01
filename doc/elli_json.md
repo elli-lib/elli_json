@@ -5,8 +5,16 @@
 * [Function Index](#index)
 * [Function Details](#functions)
 
-Convert response body to JSON.
+elli_json middleware.
 
+Copyright (c) 2016, Sukumar Yethadka; 2017-2018, elli-lib team.
+
+__Authors:__ Sukumar Yethadka.
+
+<a name="description"></a>
+
+## Description ##
+Encode the response body as JSON.
 <a name="index"></a>
 
 ## Function Index ##
@@ -23,5 +31,9 @@ Convert response body to JSON.
 
 ### postprocess/3 ###
 
-`postprocess(Req, Res, Config) -> any()`
+<pre><code>
+postprocess(Req, Res1, Config) -&gt; Res2
+</code></pre>
+
+<ul class="definitions"><li><code>Req = <a href="elli.md#type-req">elli:req()</a></code></li><li><code>Res1 = <a href="elli_handler.md#type-result">elli_handler:result()</a></code></li><li><code>Config = <a href="elli_handler.md#type-callback_args">elli_handler:callback_args()</a></code></li><li><code>Res2 = <a href="elli_handler.md#type-result">elli_handler:result()</a></code></li></ul>
 

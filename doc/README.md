@@ -2,7 +2,7 @@
 
 # elli_json #
 
-Copyright (c) 2016 Sukumar Yethadka, 2017 elli-lib team.
+Copyright (c) 2016 Sukumar Yethadka, 2017-2018 elli-lib team.
 
 __Version:__ 1.0.1
 
@@ -11,11 +11,11 @@ __Version:__ 1.0.1
 [![Travis CI][travis badge]][travis builds]
 [![Coverage Status][coveralls badge]][coveralls link]
 [![Erlang][erlang badge]][erlang downloads]
-[![MIT License][license badge]][LICENSE]
+[![MIT License][license badge]](LICENSE)
 
-*Elli middleware to encode request bodies as JSON.*
+*Elli middleware to encode response bodies as JSON.*
 
-Encode an elli request body as JSON when the content type is `application/json`.
+Encode an elli response body as JSON when the content type is `application/json`.
 
 [travis badge]: https://travis-ci.org/elli-lib/elli_json.svg?branch=develop
 [travis builds]: https://travis-ci.org/elli-lib/elli_json?branch=develop
@@ -27,7 +27,6 @@ Encode an elli request body as JSON when the content type is `application/json`.
 [erlang badge]: https://img.shields.io/badge/erlang-%E2%89%A518.0-red.svg
 [erlang downloads]: http://www.erlang.org/downloads
 [license badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[LICENSE]: https://github.com/elli-lib/elli_json/blob/develop/LICENSE
 
 
 ## Modules ##
